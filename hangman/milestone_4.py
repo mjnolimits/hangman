@@ -10,13 +10,13 @@ class Hangman:
         self.list_of_guesses = []
 
     def check_guess(self, guess):
-        guess = guess.lower()  # Convert the guessed letter to lowercase
+        guess = guess.lower()  
         if guess in self.word:
             print(f"Good guess! {guess} is in the word.")
             for i in range(len(self.word)):
                 if self.word[i] == guess:
-                    self.word_guessed[i] = guess  # Replace "_" with the guess
-                    self.num_letters -= 1  # Reduce the count of unique letters
+                    self.word_guessed[i] = guess  
+                    self.num_letters -= 1  
         else:
             self.num_lives -= 1
             print(f"Sorry, {guess} is not in the word.")
@@ -30,8 +30,8 @@ class Hangman:
             elif guess in self.list_of_guesses:
                 print("You already tried that letter!")
             else:
-                self.check_guess(guess)  # Call the check_guess method
-                self.list_of_guesses.append(guess)  # Append the guess to list_of_guesses
+                self.check_guess(guess)  
+                self.list_of_guesses.append(guess)  
                 print(f"Word to guess: {' '.join(self.word_guessed)}")
                 print(f"Number of unique letters: {self.num_letters}")
 

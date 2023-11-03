@@ -55,5 +55,5 @@ def play_game(word_list):
             break
 
 if __name__ == "__main__":
-    word_list = ["apple", "banana", "cherry", "date", "elderberry"]
+    word_list = ["apple", "banana", "cherry", "mango", "grape"]
     play_game(word_list)
